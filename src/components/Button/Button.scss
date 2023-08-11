@@ -1,0 +1,70 @@
+@use '../../sass/' as *;
+
+.btn {
+    &-wrapper {
+        position: relative;
+        @include flex(center, unset);
+        padding: 0 8px;
+        width: 100%;
+        height: 100%;
+        color: $white;
+        cursor: pointer;
+    }
+    &-content {
+        margin: 0 8px;
+    }
+    &-image,
+    &-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 5px;
+    }
+    &-notify {
+        position: absolute;
+        top: -1px;
+        right: 15px;
+        transform: translateY(-20%);
+        color: $main-color;
+
+        i {
+            font-size: 7px;
+        }
+    }
+    &-icon + &-content,
+    &-content + &-icon {
+        margin-left: 8px;
+    }
+}
+
+// 2 Button
+.btn-wrapper + .btn-wrapper {
+    margin-right: 8px;
+}
+
+// Styles
+.primary {
+}
+.secondary {
+}
+.danger {
+}
+.rounded {
+}
+.tranparent {
+    background-color: transparent;
+    border: transparent;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+// Size
+.larger {
+}
+.small {
+    @include flex(center, center);
+    min-height: 35px;
+    min-width: 35px;
+}

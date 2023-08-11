@@ -1,0 +1,56 @@
+@use '../../sass/' as *;
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// Tùy chỉnh nút "Next" và "Prev"
+.swiper-button-next,
+.swiper-button-prev {
+    opacity: 0;
+    height: 50%;
+    transform: translateY(-25%);
+    background-color: rgba($color: #000000, $alpha: 0);
+    color: white;
+    padding: 10px 20px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.movies-main:hover .swiper-button-next,
+.movies-main:hover .swiper-button-prev {
+    opacity: 1;
+}
+
+.swiper-button-disabled {
+    opacity: 0 !important;
+}
+
+.movies {
+    &-wrapper {
+        display: block;
+    }
+    &-header {
+        @include flex(center, space-between);
+    }
+    &-main {
+        margin: 16px 0;
+    }
+}
+
+// info
+.info {
+    &-title {
+        color: $white;
+    }
+    &-link {
+        font-weight: 600;
+        color: $main-color;
+    }
+}

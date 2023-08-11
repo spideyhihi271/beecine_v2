@@ -1,0 +1,26 @@
+.popper {
+    &-wrapper {
+        position: relative;
+        display: block;
+        width: fit-content;
+        height: fit-content;
+    }
+    &-shown {
+        position: absolute;
+        top: 150%;
+        right: 0;
+        width: fit-content;
+        opacity: 0;
+        visibility: hidden;
+        transition: all ease-in-out 0.2s;
+    }
+}
+
+// Hovering
+.popper-wrapper:hover {
+    .popper-shown,
+    .popper-shown:hover {
+        opacity: 1;
+        visibility: visible;
+    }
+}

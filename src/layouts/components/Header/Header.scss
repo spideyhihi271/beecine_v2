@@ -1,0 +1,116 @@
+@use '../../../sass/' as *;
+
+.header {
+    &-wrapper {
+        display: block;
+        height: $header-h;
+        background-color: $third-color;
+    }
+    &-main {
+        border-bottom: 1px solid $second-color;
+    }
+    &-main-container {
+        @include flex(center, space-between);
+        height: calc($header-h * 0.6);
+        padding: 0 5px;
+    }
+    &-logo {
+        position: relative;
+        @include flex(center, center);
+        flex: 1;
+        height: 100%;
+        &-link {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -45%);
+            width: 120px;
+        }
+    }
+    &-logger {
+        position: relative;
+        padding: 0 10px;
+        width: fit-content;
+        height: 100%;
+        border-left: 1px solid $second-color;
+        border-right: 1px solid $second-color;
+    }
+    &-actions {
+        @include flex(center, space-between);
+        height: 100%;
+        width: fit-content;
+        border-left: 1px solid $second-color;
+        border-right: 1px solid $second-color;
+    }
+    &-nav {
+        @include flex(center, center);
+        height: calc($header-h * 0.4);
+    }
+}
+
+// Logger
+.logger {
+    &-lable {
+        @include flex(center, space-between);
+        height: 100%;
+    }
+    &-avt {
+        width: 30px;
+        height: 30px;
+        border-radius: 5px;
+    }
+    &-name {
+        margin: 0 8px;
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+// Action
+.action {
+    &-update {
+        @include flex(center, unset);
+        padding: 0 10px;
+        &-img {
+            width: 45px;
+        }
+        &-info {
+            flex: 1;
+            color: $white;
+            font-weight: 600;
+            text-align: center;
+        }
+        &-title {
+            font-size: 12px;
+        }
+        &-content {
+            font-size: 10px;
+        }
+    }
+    &-search {
+        @include flex(center, center);
+        height: 100%;
+        width: 60px;
+        text-align: center;
+        color: $white;
+        border-left: 1px solid $second-color;
+    }
+}
+
+// Nav
+.nav {
+    &-list {
+        @include flex(center, center);
+        height: 100%;
+        padding: 10px 0;
+    }
+    &-item {
+        margin: 0 16px;
+    }
+    &-link {
+        color: $white;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
