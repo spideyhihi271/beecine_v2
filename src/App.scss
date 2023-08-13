@@ -1,7 +1,7 @@
 @use './sass/' as *;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500;600;700&display=swap');
 
 // Icon
 @import url('./assets/vendors/fonts/css/all.min.css');
@@ -73,8 +73,29 @@ iframe {
     margin: auto;
 }
 
+.section {
+    padding: 0 2rem;
+}
+
+.d-flex {
+    @include flex(center, center);
+}
+
 .spacing-header {
     margin-top: $header-h;
+}
+
+.header-page {
+    padding: 1%;
+}
+
+.title {
+    color: $white;
+    text-align: center;
+}
+.description {
+    text-align: center;
+    color: $txt-color;
 }
 
 .mb-3 {
@@ -85,6 +106,10 @@ iframe {
     margin-bottom: 2rem;
 }
 
-.section {
-    padding: 0 2rem;
+.m-8 {
+    margin: 8px 0;
+}
+
+.m-16 {
+    margin: 16px 0;
 }

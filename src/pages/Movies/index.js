@@ -1,12 +1,10 @@
 import Carousel from '~/components/Carousel';
 import MovieList from '~/components/MovieList/MovieList';
 
-function Home() {
+function Movies() {
     return (
         <>
-            <div className="spacing-header">
-                <Carousel />
-            </div>
+            <Carousel />
             <div className="container">
                 <MovieList />
                 <MovieList />
@@ -18,4 +16,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default Movies;

@@ -1,0 +1,79 @@
+@use '../../sass/' as *;
+
+$watch-spacing: 30px;
+$watch-action-s: 30px;
+
+.watch {
+    &-wrapper {
+        position: relative;
+        display: block;
+        width: 100vw;
+        height: 100vh;
+    }
+    &-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+    }
+    &-nav {
+        position: absolute;
+        top: $watch-spacing;
+        left: calc($watch-spacing * 1.5);
+        z-index: 1;
+    }
+    &-info {
+        position: absolute;
+        top: $watch-spacing;
+        right: calc($watch-spacing * 1.5);
+        z-index: 2;
+        min-width: 250px;
+        padding: 0 8px;
+        border-right: 5px solid $main-color;
+        color: white;
+    }
+    &-name {
+        font-size: 25px;
+    }
+}
+
+.watch-nav {
+    &-list {
+        @include flex(center, unset);
+        list-style: none;
+    }
+    &-item {
+        margin-right: 32px;
+    }
+    &-btn {
+        @include flex(center, center);
+        width: $watch-action-s;
+        height: $watch-action-s;
+        color: $white;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        i {
+            font-size: 25px;
+        }
+    }
+}
+
+// video.scss
+
+.watch-video {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); // Đổ bóng cho video
+
+    // Tùy chỉnh các nút điều khiển
+    &::-webkit-media-controls-play-button,
+    &::-webkit-media-controls-start-playback-button {
+        display: block; // Ẩn nút play mặc định của trình duyệt
+    }
+
+    // Tùy chỉnh nút fullscreen
+    &::-webkit-media-controls-fullscreen-button {
+        display: none; // Ẩn nút fullscreen mặc định
+    }
+}

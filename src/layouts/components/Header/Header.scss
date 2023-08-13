@@ -2,7 +2,12 @@
 
 .header {
     &-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 10;
         display: block;
+        width: 100%;
         height: $header-h;
         background-color: $third-color;
     }

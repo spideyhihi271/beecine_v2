@@ -74,13 +74,16 @@
 .pag {
     &-list {
         @include flex(unset, unset);
-        height: 55px;
-        background-color: $white;
+        padding: 0 15px;
+        height: 60px;
+        width: 55vw;
+        background-color: $second-color;
     }
     &-item {
-        display: block;
-        margin: 0 8px;
-        width: 170px;
+        position: relative;
+        flex: 1;
+        height: fit-content;
+        margin-right: 4px;
     }
     &-active {
         .pag {
@@ -93,6 +96,9 @@
         }
     }
     &-progress {
+        position: absolute;
+        top: 0;
+        left: 0;
         height: 3px;
         width: 100%;
         background-color: transparent;
@@ -100,13 +106,17 @@
     }
     &-btn {
         @include flex(center, unset);
-        width: 75%;
+        margin: 8px 0;
+        width: 100%;
         height: calc(100% - 3px);
         text-align: left;
         border: none;
         font-size: 16px;
         font-weight: 600;
+        color: $white;
         background-color: transparent;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
         &:hover {
             color: $main-color;
         }

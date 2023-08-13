@@ -1,0 +1,91 @@
+@use '../../sass/' as *;
+
+.plans {
+    &-container {
+        margin: 32px 0;
+        display: block;
+        width: 100%;
+    }
+    &-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 32px;
+        list-style-type: none;
+    }
+}
+.plan {
+    &-item {
+        display: block;
+        width: 100%;
+    }
+    &-info {
+        border-bottom: 1px solid $third-color;
+    }
+    &-name {
+        color: $white;
+        padding: 8px 0;
+        border-bottom: 1px solid $third-color;
+    }
+    &-price {
+        @include flex(center, unset);
+        p {
+            font-size: 45px;
+            font-weight: bold;
+            color: $white;
+            margin-right: 4px;
+        }
+    }
+    &-used {
+        color: $white;
+        margin: 8px 0;
+    }
+    &-features {
+        margin: 8px 0;
+    }
+    &-register-btn {
+        margin: 16px 0;
+        height: 45px;
+        width: 100%;
+        font-weight: bold;
+        color: $white;
+        background-color: $second-color;
+        border-radius: 10px;
+        border: none;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            cursor: pointer;
+            background-color: $main-color;
+        }
+    }
+    &-more {
+        width: fit-content;
+        margin: 8px auto;
+        &-link {
+            margin-left: 8px;
+            color: $main-color;
+        }
+    }
+}
+
+.features {
+    &-title {
+        color: $white;
+    }
+    &-list {
+        list-style-type: none;
+    }
+    &-item {
+        @include flex(center, unset);
+        padding: 0 15px;
+        margin: 8px 0;
+        height: 45px;
+        border-radius: 10px;
+        &:nth-child(2n) {
+            background-color: $second-color;
+        }
+        i {
+            color: $main-color;
+            margin-right: 8px;
+        }
+    }
+}

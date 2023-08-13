@@ -41,25 +41,23 @@ function Carousel() {
                             <li className="pag-item">
                                 <div className="pag-progress"></div>
                                 <button className="pag-btn">
-                                    Sát thủ đối đầu
+                                    Heart of Stone
                                 </button>
                             </li>
                             <li className="pag-item">
                                 <div className="pag-progress"></div>
                                 <button className="pag-btn">
-                                    Sát thủ đối đầu
+                                    Khách sạn vương giả
                                 </button>
                             </li>
                             <li className="pag-item">
                                 <div className="pag-progress"></div>
-                                <button className="pag-btn">
-                                    Sát thủ đối đầu
-                                </button>
+                                <button className="pag-btn">Thế chiến Z</button>
                             </li>
                             <li className="pag-item">
                                 <div className="pag-progress"></div>
                                 <button className="pag-btn">
-                                    Sát thủ đối đầu
+                                    Cuộc chiến thượng lưu
                                 </button>
                             </li>
                         </ul>

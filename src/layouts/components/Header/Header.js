@@ -76,37 +76,37 @@ function Header() {
             <div className="header-nav">
                 <ul className="nav-list">
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.home} className="nav-link">
                             TRANG CHỦ
                         </Link>
                         <div className="nav-line"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.movies} className="nav-link">
                             PHIM
                         </Link>
                         <div className="nav-line"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.tvSeries} className="nav-link">
                             TV SERIES
                         </Link>
                         <div className="nav-line"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.plans} className="nav-link">
                             GÓI DỊCH VỤ
                         </Link>
                         <div className="nav-line"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.movies} className="nav-link">
                             MỚI VÀ PHỔ BIẾN
                         </Link>
                         <div className="nav-line"></div>
                     </li>
                     <li className="nav-item">
-                        <Link to={''} className="nav-link">
+                        <Link to={config.routes.movies} className="nav-link">
                             NHIỀU HƠN
                         </Link>
                         <div className="nav-line"></div>

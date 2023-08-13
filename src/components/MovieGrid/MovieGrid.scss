@@ -1,0 +1,15 @@
+@use '../../sass/' as *;
+
+.movie-grid {
+    &-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: $white;
+    }
+    &-layout {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 8px;
+        margin: 8px 0;
+    }
+}
