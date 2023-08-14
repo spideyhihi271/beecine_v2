@@ -1,0 +1,33 @@
+@use '../../sass/' as *;
+
+.input {
+    &-wrapper {
+        display: block;
+        width: 100%;
+    }
+    &-lable {
+        margin-bottom: 8px;
+        display: block;
+        font-size: 15px;
+        color: $white;
+    }
+    &-box {
+        padding-left: 15px;
+        height: 45px;
+        width: 100%;
+        color: $white;
+        background-color: transparent;
+        border: 1px solid $second-color;
+        transition: all ease-in-out 0.3s;
+        &:focus {
+            border: 1px solid $white;
+        }
+    }
+    &-error {
+        border-bottom: 1.5px solid red;
+    }
+}
+
+.input-wrapper + .input-wrapper {
+    margin-left: 8px;
+}

@@ -1,13 +1,12 @@
 import Home from '~/pages/Home';
 
+import { Fragment } from 'react';
 import config from '~/configs';
 import Movies from '~/pages/Movies';
-import TvSeries from '~/pages/TvSeries';
 import Plans from '~/pages/Plans';
-import Login from '~/pages/Login';
-import Watch from '~/pages/Watch';
-import { Fragment } from 'react';
 import Search from '~/pages/Search';
+import TvSeries from '~/pages/TvSeries';
+import Watch from '~/pages/Watch';
 
 const publicRoutes = [
     {
@@ -30,10 +29,6 @@ const publicRoutes = [
         path: config.routes.watch,
         component: Watch,
         layout: Fragment,
-    },
-    {
-        path: config.routes.login,
-        component: Login,
     },
     {
         path: config.routes.search,

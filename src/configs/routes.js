@@ -5,7 +5,6 @@ const routes = {
     plans: '/plans',
     watch: '/watch',
     search: '/search',
-    login: '/login',
 };
 
 export default routes;

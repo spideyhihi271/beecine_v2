@@ -5,8 +5,7 @@
         position: relative;
         @include flex(center, unset);
         padding: 0 8px;
-        width: 100%;
-        height: 100%;
+        width: fit-content;
         color: $white;
         cursor: pointer;
     }

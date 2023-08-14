@@ -6,116 +6,165 @@
         top: 0;
         left: 0;
         z-index: 10;
-        display: block;
         width: 100%;
+        background-color: $body-bg;
+        border-bottom: 1.5px solid $second-color;
+    }
+    &-container {
+        @include flex(center, unset);
         height: $header-h;
-        background-color: $third-color;
-    }
-    &-main {
-        border-bottom: 1px solid $second-color;
-    }
-    &-main-container {
-        @include flex(center, space-between);
-        height: calc($header-h * 0.6);
-        padding: 0 5px;
     }
     &-logo {
-        position: relative;
-        @include flex(center, center);
-        flex: 1;
-        height: 100%;
-        &-link {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -45%);
-            width: 120px;
-        }
-    }
-    &-logger {
-        position: relative;
-        padding: 0 10px;
-        width: fit-content;
-        height: 100%;
-        border-left: 1px solid $second-color;
-        border-right: 1px solid $second-color;
-    }
-    &-actions {
-        @include flex(center, space-between);
-        height: 100%;
-        width: fit-content;
-        border-left: 1px solid $second-color;
-        border-right: 1px solid $second-color;
+        width: 120px;
     }
     &-nav {
-        @include flex(center, center);
-        height: calc($header-h * 0.4);
+        flex: 1;
+        margin: 0 32px;
     }
-}
-
-// Logger
-.logger {
-    &-lable {
-        @include flex(center, space-between);
-        height: 100%;
-    }
-    &-avt {
-        width: 30px;
-        height: 30px;
-        border-radius: 5px;
-    }
-    &-name {
-        margin: 0 8px;
-        color: $white;
-        font-size: 14px;
-        font-weight: 500;
-    }
-}
-
-// Action
-.action {
-    &-update {
-        @include flex(center, unset);
-        padding: 0 10px;
-        &-img {
-            width: 45px;
-        }
-        &-info {
-            flex: 1;
-            color: $white;
-            font-weight: 600;
-            text-align: center;
-        }
-        &-title {
-            font-size: 12px;
-        }
-        &-content {
-            font-size: 10px;
-        }
-    }
-    &-search {
-        @include flex(center, center);
-        height: 100%;
-        width: 60px;
-        text-align: center;
-        color: $white;
-        border-left: 1px solid $second-color;
+    &-actions {
+        width: fit-content;
     }
 }
 
 // Nav
 .nav {
     &-list {
-        @include flex(center, center);
-        height: 100%;
-        padding: 10px 0;
+        @include flex(center, unset);
+        list-style-type: none;
     }
     &-item {
-        margin: 0 16px;
+        position: relative;
+
+        margin-right: 16px;
     }
     &-link {
+        @include flex(center, unset);
+        height: $header-h;
+        transition: all ease-in-out 0.3s;
+    }
+    &-line {
+        height: 1.5px;
+        width: 0;
+        background-color: transparent;
+        transition: all ease-in-out 0.3s;
+    }
+    &-link.active {
         color: $white;
-        font-size: 14px;
-        font-weight: 500;
+    }
+    &-link.active + .nav-line {
+        width: 100%;
+        background-color: $main-color;
+    }
+}
+
+// Actions
+.actions {
+    &-list {
+        @include flex(center, unset);
+    }
+    &-item {
+        margin-right: 32px;
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    &-link > i {
+        font-size: 20px;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            color: $white;
+        }
+    }
+    &-logger {
+        @include flex(center, unset);
+        cursor: pointer;
+        &:hover {
+            .actions-logger-icon {
+                animation: rote90deg 1 0.5s forwards;
+            }
+        }
+        &-avt {
+            margin-right: 8px;
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+        }
+        &-icon > i {
+            color: $white;
+            font-size: 15px;
+        }
+    }
+}
+
+// Notify
+.notify {
+    &-wrapper {
+        display: block;
+        width: 360px;
+        padding: 8px;
+    }
+    &-list {
+        display: block;
+        width: 100%;
+        border: 1px solid $second-color;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+        padding: 4px;
+    }
+    &-item {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    &-link {
+        @include flex(unset, unset);
+    }
+    &-image {
+        width: 110px;
+        height: 65px;
+    }
+    &-info {
+        margin: 0 8px;
+    }
+    &-title {
+        color: $white;
+    }
+    &-send {
+        font-size: 12px;
+    }
+}
+
+// Logger
+.logger {
+    &-wrapper {
+        width: 200px;
+        border: 1px solid $second-color;
+        background-color: rgba($color: #000000, $alpha: 0.8);
+    }
+    &-list {
+        padding: 8px;
+    }
+    &-item {
+        margin: 8px 0;
+    }
+    &-link {
+        @include flex(center, unset);
+        &:hover {
+            .logger-content {
+                text-decoration: underline;
+            }
+        }
+    }
+    &-image,
+    &-icon {
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        color: $white;
+        margin-right: 16px;
+        border-radius: 5px;
+    }
+    &-content {
+        font-size: 15px;
+        color: $white;
     }
 }

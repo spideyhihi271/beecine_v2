@@ -1,0 +1,125 @@
+@use '../../sass/' as *;
+
+.payment {
+    &-wrapper {
+        @include flex(unset, center);
+        width: 75%;
+        margin: 0 auto;
+    }
+    &-menthod,
+    &-bill {
+        flex: 1;
+    }
+}
+
+.payment-menthod {
+    &-title {
+        color: $white;
+    }
+    &-list {
+        display: block;
+    }
+    &-item {
+        padding: 8px;
+        margin: 8px 0;
+        border: 1px solid $second-color;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+    }
+    &-main {
+        @include flex(center, unset);
+    }
+    &-sub {
+        height: 0;
+        overflow: hidden;
+        transition: all ease-in-out 0.3s;
+    }
+    &-logo {
+        width: 45px;
+    }
+    &-info {
+        margin: 0 8px;
+    }
+    &-name {
+        color: $white;
+    }
+    &-description {
+        font-size: 14px;
+    }
+}
+
+// Active
+.payment-menthod {
+    &-item.active {
+        .payment-menthod-sub {
+            height: fit-content;
+            overflow: hidden;
+        }
+    }
+}
+
+// Credit form
+.credit-form {
+    margin: 8px 0;
+    &-list {
+        display: block;
+    }
+    &-item {
+        width: 100%;
+        margin: 8px 0;
+        &:last-child {
+            @include flex(center, unset);
+        }
+    }
+}
+
+// Payment-bill
+.payment-bill {
+    position: relative;
+    &-wrapper {
+        position: sticky;
+        top: 0;
+        left: 0;
+        width: 90%;
+        padding: 0 8px;
+        margin: 0 16px;
+    }
+    &-title {
+        color: $white;
+    }
+    &-list {
+        display: block;
+        margin: 8px 0;
+        padding: 8px 0;
+        border-bottom: 1px dashed $second-color;
+    }
+    &-item {
+        @include flex(center, space-between);
+        margin: 8px 0;
+    }
+    &-value {
+        color: $white;
+    }
+    &-submit {
+        display: block;
+        height: 45px;
+        width: 100%;
+        margin: 8px 0;
+        background-color: $main-color;
+        border: none;
+        color: white;
+        cursor: pointer;
+        transition: all ease-in-out 0.3s;
+        &:hover {
+            background-color: $third-color;
+        }
+    }
+    &-caution {
+        font-size: 15px;
+    }
+    &-link {
+        color: $main-color;
+        margin: 0 4px;
+    }
+}

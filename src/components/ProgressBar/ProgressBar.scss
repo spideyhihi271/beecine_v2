@@ -1,0 +1,32 @@
+@use '../../sass/' as *;
+
+.progress {
+    &-bar {
+        width: 75%;
+        margin: 0 auto;
+    }
+    &-full {
+        width: 100%;
+    }
+    &-line {
+        height: 8px;
+        width: 100%;
+        border: 1px solid $second-color;
+        margin: 8px 0;
+    }
+    &-real {
+        width: 25%;
+        height: 100%;
+        background-color: $main-color;
+        transition: all ease-in-out 0.3s;
+    }
+    &-list {
+        @include flex(center, unset);
+    }
+    &-item {
+        flex: 1;
+    }
+    &-lable.active {
+        color: $white;
+    }
+}
